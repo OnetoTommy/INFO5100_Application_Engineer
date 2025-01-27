@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="checkCookie()">
+
+</body>
+<script>
+    function setCookie(cname, value, exdays) {
+        var d = new Date();
+        d.setDate(d.getDate() + expires * 24 * 60 * 60 * 1000)
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + value + ";" + expires;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var c = document.cookie.split(";");
+        for (var i = 0; i < c.length; i++) {
+            let d = c[i].trim();
+            if (d.indexOf(name) == 0) {
+                return d.substring(name.length, d.length)
+            }
+        }
+        return ""
+    }
+
+    function checkCookie() {
+        var user = getCookie("username");
+        if (user != "") {
+            alert("Welcome" + user)
+        } else {
+            user = prompt("Please enter")
+            if (user != "" && user != null) {
+                setCookie("username", user, 30)
+            }
+        }
+
+
+
+    }
+</script>
+
+
+</html>

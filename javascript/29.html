@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>JavaScript 对象是可变的。</p>
+    <p>拷贝的对象改变来，原始的也会跟着改变。</p>
+
+    <p id="demo"></p>
+</body>
+<script>
+    var x = {
+        f: "Tom",
+        l: "Blaze",
+        a: 20
+    }
+    var y = x;
+    y.a = 10;
+    document.getElementById("demo").innerHTML = x.a;
+</script>
+
+</html>

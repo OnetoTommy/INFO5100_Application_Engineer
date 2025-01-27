@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Title</h1>
+    <p id="demo"></p>
+</body>
+<script>
+    class demo {
+        constructor(name) {
+            this.name = name;
+        }
+        static hello() {
+            return "hello";
+        }
+    }
+    let a = new demo("Tom");
+    document.getElementById("demo").innerHTML = demo.hello();
+    // 不能通过实例化后的对象调用静态方法
+    // document.getElementById("demo").innerHTML = a.hello();
+    // 以上代码会报错
+</script>
+
+</html>

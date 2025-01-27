@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The first JavaScript</h1>
+    <p>Please input number. Pop up a prompt box if the input value is not value</p>
+    <input id="demo" type=" text ">
+    <button type="button" onclick="myFunction()">Click here</button>
+    <script>
+        function myFunction() {
+            s = document.getElementById("demo").value;
+            if (s == "" || isNaN(s)) {
+                alert("Please input number")
+            }
+        }
+    </script>
+</body>
+
+</html>

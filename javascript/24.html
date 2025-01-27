@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo1">
+        <p id="de1">Bubble</p>
+    </div>
+    <div id="demo2">
+        <p id="de2">Capture</p>
+    </div>
+</body>
+<script>
+    document.getElementById("demo1").addEventListener("click", function() {
+        alert("DIV1");
+    }, false);
+    document.getElementById("de1").addEventListener("click", function() {
+        alert("P1");
+    }, false);
+    document.getElementById("de2").addEventListener("click", function() {
+        alert("P2");
+    }, true);
+    document.getElementById("demo2").addEventListener("click", function() {
+        alert("DIV2");
+    }, true);
+</script>
+
+</html>

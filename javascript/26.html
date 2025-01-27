@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">这是一个段落。</p>
+        <p id="p2">这是另外一个段落。</p>
+    </div>
+</body>
+<script>
+    var b = document.createElement("p")
+    var c = document.createTextNode("bbbb")
+    b.appendChild(c)
+    var a = document.getElementById("div1");
+    var d = document.getElementById("p1")
+    a.replaceChild(b, d)
+        // a.insertBefore(b, d)
+        // a.removeChild(d)
+</script>
+
+</html>

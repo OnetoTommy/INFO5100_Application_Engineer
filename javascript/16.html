@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Title01</h1>
+    <p id="demo"></p>
+</body>
+<script>
+    class demo {
+        constructor(name) {
+            this.name = name;
+        }
+        call() {
+            return this.name
+        }
+    }
+
+    class subdemo extends demo {
+        constructor(name, age) {
+            super(name);
+            this.age = age;
+        }
+        show() {
+            return this.call() + ";" + this.age;
+        }
+    }
+    let a = new subdemo("Tom", 25);
+    document.getElementById("demo").innerHTML = a.show();
+</script>
+
+</html>

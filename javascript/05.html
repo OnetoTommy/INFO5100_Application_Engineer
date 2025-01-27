@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>What day is this week?</h1>
+    <button type="button" onclick="myFunction()">Click here</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var x;
+            var y = new Date().getDay()
+            switch (y) {
+                case 6:
+                    x = "Sat";
+                    break;
+                case 7:
+                    x = "Sun";
+                    break;
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>
