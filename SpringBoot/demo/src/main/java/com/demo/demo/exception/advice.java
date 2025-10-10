@@ -14,10 +14,10 @@ public class advice {
   Logger log = LoggerFactory.getLogger(advice.class);
 
   @ExceptionHandler(Exception.class)
-    public ResponseMessage handleException(Exception e, HttpServletRequest request) {
-        log.error("Unhandled exception on {}", request.getRequestURI(), e);
-        // adjust to your real constructor or builder
-        return new ResponseMessage(500, "error", null);
-        // or: return ResponseMessage.builder().code(500).message("error").data(null).build();
-    }
+  public ResponseMessage handleException(Exception e, HttpServletRequest request) {
+      log.error("Unhandled exception on {}", request.getRequestURI(), e);
+      // adjust to your real constructor or builder
+      return new ResponseMessage(500, "error", null);
+      // or: return ResponseMessage.builder().code(500).message("error").data(null).build();
+  }
 }
