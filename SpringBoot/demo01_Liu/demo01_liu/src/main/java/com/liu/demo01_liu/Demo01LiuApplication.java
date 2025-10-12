@@ -1,13 +1,13 @@
-package com.demo_01.demo_01;
+package com.liu.demo01_liu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Demo01Application {
+public class Demo01LiuApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Demo01Application.class, args);
+		SpringApplication.run(Demo01LiuApplication.class, args);
 	}
 
 }
