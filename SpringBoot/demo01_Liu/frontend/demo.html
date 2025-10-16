@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- <p>name: {{username}}</p>
+    <p>age: {{age}}</p>
+    <p>{{desc}}</p>
+    <p v-html="desc"> </p>
+    <p :href = "link">Word</p>
+    <h3>{{ count }}</h3>
+    <button v-on:click="addcount">+1</button>
+    <button @click="count += 1">+1</button> -->
+    <div>
+      <input type="text" v-model ="name">
+      <button @click="addCou nt">Add</button>
+    </div>
+    <ul>
+      <li v-for="(user, index) in underlist" :key="index">
+        <input type="checkbox">
+        name: {{user.name}}, age: {{user.age}}
+      </li>
+    </ul>
+
+  </div>
+    
+
+  <script>
+    // const { createApp, ref } = Vue
+
+    // createApp({
+    //   setup() {
+    //     // const message = ref('Hello vue!')
+    //     return {
+    //       message: "Hello vue!",
+    //       username: 'John Doe', // Example of another property
+    //       age: 30, // Example of another property
+    //       isActive: true, // Example of another property
+    //       items: [1, 2, 3, 4, 5], // Example of another property,
+    //       desc: '<a href="https://example.com">Example Link</a>', // Example of another property
+    //       link: 'https://baidu.com', // Example of another property
+    //       count: 0
+    //     }
+    //   },
+    //   methods: {
+    //     addcount() {
+    //       this.count += 1
+    //     }
+    //   }
+    // }).mount('#app')
+
+    const vm = {
+      data() {
+        return {
+          underlist: [
+            { id:1, name: 'John', age: 30 },
+            { id:2, name: 'Jane', age: 25 },
+            { id:3, name: 'Mike', age: 35 }
+          ],
+          name: '',
+          nxtId: 4
+        }
+      },
+      methods: {
+        addCount() {
+          this.underlist.unshift({ name: this.name, age: 20, id: this.nxtId })
+          this.name = ''
+          this.nxtId++
+        }
+      }
+    }
+    const app = Vue.createApp(vm)
+    app.mount('#app')
+  </script> 
+<!-- 
+  <div id="app">
+    <h3>count 的值为: {{ count }}</h3>
+    <button v-on:click="addCount">+1</button>
+    <button @click="count += 1">+1</button>
+  </div>
+
+  <script>
+    const vm = {
+      data() {
+        return {
+          count: 0
+        }
+      },
+      methods: {
+        addCount() {
+          this.count += 1
+        }
+      }
+    }
+
+    const app = Vue.createApp(vm)
+    app.mount('#app')
+  </script>
+  
+</body>
+</html>
